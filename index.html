@@ -19,27 +19,21 @@
 </head>
 
 <body>
-  <header></header>
+  <header class="container">
+    <h1 class="text-center text-success fw-bold mt-5">Welcome to Ranga Store</h1>
+  </header>
   <main class="main">
-    <div class="search-field container w-50 mt-5">
-      <div class="input-group mb-3 mt-4">
+    <div class="search-field container w-50 mt-4 mb-4">
+      <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Your Favorite Product"
           aria-label="Search Your Favorite Product" aria-describedby="search-btn">
-        <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="loadProducts()">Search</button>
+        <button class="btn btn-outline-primary" type="button" id="search-btn" onclick="loadProducts()">Search</button>
       </div>
-      <!--  -->
-      <!-- <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div> -->
     </div>
-    <div class="row">
+    <div class="row ms-3">
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="container">
-          <!-- <h1></h1> -->
+        <!-- product item  -->
+        <div id="all-products" class="row row-cols-1 row-cols-md-3 g-3">
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
