@@ -8,27 +8,30 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    console.log(product)
     const rating = product.rating.rate;
     const ratingCount = product.rating.count;
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
-    <div class="col">
-            <div class="card h-100 single-product">
-              <img src="${image}" class="card-img-top product-image mx-auto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">${product.title}</h5>
-                <p>Category: ${product.category}</p>
-                <p> Rating: <span class="fw-bold">${rating}</span> Total Review: <span class="fw-bold">${ratingCount}</span></p>
-                <h2>Price: $ ${product.price}</h2>
-                <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary me-2">add to cart</button>
-                <button id="details-btn" class="btn btn-success">Details</button></div>
-              </div>
-            </div>
-          </div>
-      `;
+    <div class="col h-100">
+      <div class="card h-100 single-product">
+        <img src="${image}" class="card-img-top product-image mx-auto" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-center">${product.title}</h5>
+          <p class="text-center">Category: ${product.category}</p>
+          <p class="text-center"> Rating: <span class="fw-bold text-warning"><i class="fas fa-star"></i></span> <span class="fw-bold">${rating}</span> <span class="fw-bold">(${ratingCount} Review)</span>
+          </p>
+          <h2 class="text-center fs-4">Price: <span class="fw-bold">$${product.price}</span></h2>
+        </div>
+        <div class="cart-footer text-center">
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn"
+            class="buy-now btn btn-primary">add to cart</button>
+          <button class="btn btn-success">Details</button>
+        </div>
+      </div>
+    </div>
+    `;
     document.getElementById("all-products").appendChild(div);
   }
 };
@@ -88,3 +91,8 @@ const updateTotal = () => {
 };
 
 loadProducts();
+
+// buy now btn funtionality
+const buyNow = () => {
+
+}
