@@ -5,12 +5,15 @@ body {
 
 .single-product {
   padding: 10px;
+  background-color: rgb(252, 252, 252);
   transition: 0.5s;
 }
+
 .single-product:hover {
   box-shadow: 1px -1px 15px rgba(201, 198, 198, 0.808);
   border-radius: 10px;
 }
+
 .product-image {
   width: 150px;
   height: 150px;
@@ -18,10 +21,10 @@ body {
 }
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
+  background-color: #fff;
   padding: 15px;
-  box-shadow: 0px 0px 5px gray;
-  border-radius: px;
+  box-shadow: 0px 0px 5px rgb(199, 199, 199);
+  border-radius: 4px;
   margin-right: 10px;
   position: fixed;
 }
